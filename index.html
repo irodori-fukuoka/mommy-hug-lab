@@ -639,8 +639,14 @@
     </div>
     <h2 id="cta-h">一人で頑張る子育てから、<br>人や社会とつながる子育てへ。</h2>
     <p class="lede">ニックネーム参加OK ／ 見るだけOK</p>
-    <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfkHz7HGmRJgd58CqXdMUp6q6XInEvTMUSLhP3SF72ZGRK5uQ/viewform" target="_blank" rel="noopener">Mommy Hug Lab.に無料で参加する</a>
-    <p class="cta-caption">タップすると参加フォームに移動します</p>
+    <a class="cta-button" id="cta-link"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSfkHz7HGmRJgd58CqXdMUp6q6XInEvTMUSLhP3SF72ZGRK5uQ/viewform"
+       data-open-href="https://docs.google.com/forms/d/e/1FAIpQLSfkHz7HGmRJgd58CqXdMUp6q6XInEvTMUSLhP3SF72ZGRK5uQ/viewform"
+       data-closed-href="closed.html"
+       target="_blank" rel="noopener">Mommy Hug Lab.に無料で参加する</a>
+    <p class="cta-caption" id="cta-caption"
+       data-open-text="タップすると参加フォームに移動します"
+       data-closed-text="タップすると詳細ページに移動します">タップすると参加フォームに移動します</p>
     <div class="founder-card">
       <p class="founder-name">代表／保健師 なお</p>
       <p>Mommy Hug Lab.は保健師なおを中心に、<br>保健師・保育士等の専門職や事務経験者などの<br>メンバーで運営しています。</p>
@@ -650,5 +656,18 @@
   <footer class="wordmark">Mommy Hug Lab.</footer>
 
 </div>
+
+<script>
+(function(){
+  // 2026-09-18 23:59:59 JST までが募集期間。以降は自動で募集終了ページへ誘導する。
+  var RECRUITMENT_DEADLINE = new Date('2026-09-19T00:00:00+09:00');
+  if (new Date() >= RECRUITMENT_DEADLINE) {
+    var link = document.getElementById('cta-link');
+    var caption = document.getElementById('cta-caption');
+    if (link) link.href = link.dataset.closedHref;
+    if (caption) caption.textContent = caption.dataset.closedText;
+  }
+})();
+</script>
 </body>
 </html>

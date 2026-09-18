@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mommy Hug Lab. | 募集終了のお知らせ</title>
+<style>
+  :root{
+    --bg:#FBF4EA;
+    --surface:#FFFFFF;
+    --surface-soft:#FDECD3;
+    --text:#4A382C;
+    --text-muted:#8A7562;
+    --accent:#E08A46;
+    --accent-strong:#C96A2E;
+    --border:#EAD9C2;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#241C15;
+      --surface:#2F251C;
+      --surface-soft:#3B2C1F;
+      --text:#F3E9DC;
+      --text-muted:#C9B6A2;
+      --accent:#F0A05E;
+      --accent-strong:#F6C877;
+      --border:#4A3826;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#241C15;
+    --surface:#2F251C;
+    --surface-soft:#3B2C1F;
+    --text:#F3E9DC;
+    --text-muted:#C9B6A2;
+    --accent:#F0A05E;
+    --accent-strong:#F6C877;
+    --border:#4A3826;
+    color-scheme: dark;
+  }
+
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    min-height:100vh;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 48px 20px;
+  }
+  img{ max-width:100%; display:block; }
+
+  .wordmark{
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+  }
+
+  .card{
+    max-width:480px;
+    width:100%;
+    text-align:center;
+  }
+  .logo{
+    width:88px;
+    margin:0 auto 28px;
+  }
+  .kicker{
+    display:block;
+    font-family:"Cormorant Garamond", serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:.16em;
+    color:var(--accent-strong);
+    margin-bottom:10px;
+  }
+  h1{
+    font-family:"Zen Maru Gothic", sans-serif;
+    font-weight:700;
+    font-size:22px;
+    margin:0 0 28px;
+    text-wrap:balance;
+  }
+  .message{
+    margin:0 0 32px;
+    font-size:15.5px;
+    color:var(--text);
+  }
+  .message p{ margin:0 0 20px; }
+  .message p:last-child{ margin-bottom:0; }
+
+  .divider{
+    width:56px; height:2px;
+    margin:0 auto 32px;
+    background:linear-gradient(90deg, transparent, var(--accent), transparent);
+    border-radius:2px;
+  }
+
+  .note-box{
+    background:var(--surface-soft);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:24px 22px;
+    margin-bottom:28px;
+    font-size:14.5px;
+    color:var(--text);
+    text-align:left;
+  }
+  .note-box strong{ color:var(--accent-strong); }
+
+  .cta-button{
+    display:inline-block;
+    padding:16px 40px;
+    border-radius:999px;
+    background:linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color:#fff !important;
+    text-decoration:none;
+    font-weight:700;
+    font-size:15.5px;
+    letter-spacing:.04em;
+    box-shadow:0 14px 28px -14px rgba(201,106,46,0.65);
+  }
+  .cta-caption{
+    margin:14px 0 0;
+    font-size:12.5px;
+    color:var(--text-muted);
+  }
+
+  footer{
+    margin-top:44px;
+    font-size:14px;
+    letter-spacing:.04em;
+    color:var(--text-muted);
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <img class="logo" src="assets/logo.png" alt="Mommy Hug Lab. ロゴ">
+
+    <span class="kicker">Thank You</span>
+    <h1>ご応募ありがとうございました</h1>
+
+    <div class="message">
+      <p>第1期の募集は終了しました。<br>次回の募集時期は未定です。</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="note-box">
+      次回の募集案内をご希望される方は、<br>
+      マミハグラボ<strong>公式LINE</strong>に登録して、案内をお待ちください。<br><br>
+      公式LINE登録者より、優先的にご案内いたします。
+    </div>
+
+    <a class="cta-button" href="https://lin.ee/tIdYXP6" target="_blank" rel="noopener">公式LINEに登録する</a>
+    <p class="cta-caption">タップするとLINEに移動します</p>
+
+    <footer class="wordmark">Mommy Hug Lab.</footer>
+  </div>
+
+</body>
+</html>
